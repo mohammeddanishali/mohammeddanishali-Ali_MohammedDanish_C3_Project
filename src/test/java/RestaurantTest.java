@@ -71,4 +71,10 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    @Test
+    public void order_total_should_be_equal_to_588_when_Sweet_Corn_Soup_Vegetable_Lasagne_and_Ice_Cream_are_ordered() throws restaurantNotFoundException {
+
+        List<String> orderedItemNames = Arrays.asList("Sweet corn soup", "Vegetable lasagne" , "Ice Cream");
+        assertEquals(588, restaurant.calculateOrderTotal(orderedItemNames));
+    }
 }
